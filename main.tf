@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  #credentials = not using a file, using ADC
+  # credentials =  using ADC
 
   project = "plucky-cargo-338320"
   region  = "us-central1"
