@@ -8,20 +8,20 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("./plucky-cargo-338320-9fdfadcceda7.json")
+  #credentials = not using a file, using ADC
 
   project = "plucky-cargo-338320"
   region  = "us-central1"
   zone    = "us-central1-c"
 }
 
-resource "google_compute_network" "vpc_network" {
-  name = "tf-shared-services"
+resource "google_compute_network" "vpc_sharedservices" {
+  name = "sharedservices-network"
 
 
 }
 
-resource "google_compute_network" "vpc_network" {
+resource "google_compute_network" "vpc_management" {
   name = "management-network"
 
 
